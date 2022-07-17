@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fullnamePanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/labelname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|left"
+            android:text="Full name:"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:gravity="center_horizontal"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/agePanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/labelage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|left"
+            android:text="Age:"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:hint="Enter your age"
+            android:inputType="number"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toRightOf="@+id/labelage2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|right"
+            android:text="years"
+            android:textSize="30sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/salaryPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".MainActivity">
+        <TextView
+            android:id="@+id/labelsalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|left"
+            android:text="Salary:"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/salary"
+            android:layout_width="395dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:max="4000"
+            android:min="800"
+            android:progress="1000"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/salarymark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center_horizontal"
+        android:text="1000 $"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/question1Panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:background="@drawable/border"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".MainActivity">
+        <TextView
+            android:id="@+id/labelquestion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center"
+            android:text="What is the size of float variable?"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <RadioGroup
+            android:id="@+id/selectionQuestion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <RadioButton
+                android:id="@+id/answer1_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8 bit"/>
+
+            <RadioButton
+                android:id="@+id/answer1_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16 bit"/>
+
+            <RadioButton
+                android:id="@+id/answer1_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="32 bit"/>
+<!--            correct-->
+            <RadioButton
+                android:id="@+id/answer1_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="64 bit"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/question2Panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:background="@drawable/border"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".MainActivity">
+        <TextView
+            android:id="@+id/labelquestion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center"
+            android:text="What is the default value of byte variable?"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <RadioGroup
+            android:id="@+id/selectionQuestion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <RadioButton
+                android:id="@+id/answer2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"/>
+<!--correct-->
+            <RadioButton
+                android:id="@+id/answer2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0.0"/>
+
+            <RadioButton
+                android:id="@+id/answer2_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="null"/>
+
+            <RadioButton
+                android:id="@+id/answer2_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="not defined"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/question3Panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:background="@drawable/border"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".MainActivity">
+        <TextView
+            android:id="@+id/labelquestion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center"
+            android:text="Which of the following is not a keyword in java?"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <RadioGroup
+            android:id="@+id/selectionQuestion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <RadioButton
+                android:id="@+id/answer3_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="static"/>
+
+            <RadioButton
+                android:id="@+id/answer3_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Boolean"/>
+            <!--correct-->
+            <RadioButton
+                android:id="@+id/answer3_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="void"/>
+
+            <RadioButton
+                android:id="@+id/answer3_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="private"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/question4Panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:background="@drawable/border"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".MainActivity">
+        <TextView
+            android:id="@+id/labelquestion4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center"
+            android:text="What is the default value of Boolean variable?"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <RadioGroup
+            android:id="@+id/selectionQuestion4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <RadioButton
+                android:id="@+id/answer4_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="true"/>
+
+            <RadioButton
+                android:id="@+id/answer4_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="false"/>
+            <!--correct-->
+            <RadioButton
+                android:id="@+id/answer4_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="null"/>
+
+            <RadioButton
+                android:id="@+id/answer4_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="not defined"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/question5Panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:background="@drawable/border"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".MainActivity">
+        <TextView
+            android:id="@+id/labelquestion5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center"
+            android:text="How many data types in java?"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <RadioGroup
+            android:id="@+id/selectionQuestion5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <RadioButton
+                android:id="@+id/answer5_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6"/>
+
+            <RadioButton
+                android:id="@+id/answer5_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7"/>
+
+            <RadioButton
+                android:id="@+id/answer5_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8"/>
+<!--correct-->
+            <RadioButton
+                android:id="@+id/answer5_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9"/>
+        </RadioGroup>
+    </LinearLayout>
+    <RadioButton
+        android:id="@+id/experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="30sp"
+        android:text="Experience from 2 years"/>
+    <RadioButton
+        android:id="@+id/command"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="30sp"
+        android:text="Command work skills"/>
+    <RadioButton
+        android:id="@+id/trips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="30sp"
+        android:text="Readiness for business trips"/>
+    <Button
+        android:id="@+id/submitButton"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="Submit"
+        android:onClick="onSubmit"/>
+    <TextView
+        android:id="@+id/messageBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>
+</ScrollView>
